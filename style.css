@@ -28,9 +28,9 @@ body {
     height: min(100dvh, calc(100dvw * 16 / 9));
     aspect-ratio: 9 / 16;
     display: grid;
-    grid-template-rows: repeat(4, minmax(0, 1fr));
-    gap: 1.5%;
-    padding: 3%;
+    grid-template-rows: 2fr 3fr 2fr 4fr;
+    gap: 2%;
+    padding: 2%;
     overflow: hidden;
     background: var(--panel);
 }
@@ -43,7 +43,8 @@ body {
     padding: 4%;
     background: var(--card);
     border: 0.2cqi solid var(--border);
-    border-radius: 1cqi;
+    border-radius: 3cqi;
+    container-type: inline-size;
 }
 
 .force-container {
@@ -56,41 +57,39 @@ body {
     gap: 2%;
     padding: 3% 1%;
     background: #101720;
-    border-radius: 1cqi;
+    border-radius: 3cqi;
     text-align: center;
-    container-type: inline-size;
     overflow: hidden;
 }
 
 .force-lab {
     margin: 0;
     color: var(--muted);
-    font-size: 12cqi;
+    font-size: 3cqi;
 }
 
 .force-val {
     margin: 0;
     color: var(--text);
-    font-size: 19cqi;
+    font-size: 6cqi;
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
 }
 
 #rel-force-val {
     color: var(--accent);
-    font-size: 28cqi;
+    font-size: 8cqi;
 }
 
 .button {
-    width: 94%;
-    min-height: 15%;
+    width: 90%;
     padding: 5% 2%;
     background: #1b2735;
     color: var(--text);
-    border: 0.1cqi solid #344357;
-    border-radius: 2cqi;
+    border: .4cqi solid #344357;
+    border-radius: 1cqi;
     font: inherit;
-    font-size: 9cqi;
+    font-size: 3cqi;
     cursor: pointer;
 }
 
@@ -98,3 +97,12 @@ body {
     background: #0f151c;
 }
 
+.force-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25%;
+    padding: 0% 25%;
+    font-size: 3cqi;
+}
