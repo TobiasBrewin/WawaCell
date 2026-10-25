@@ -104,9 +104,11 @@ body {
     font: inherit;
     font-size: 3cqi;
     cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.button:active, .button.is-pressed {
+.button:active{
     background: #0f151c;
 }
 
