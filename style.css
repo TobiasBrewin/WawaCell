@@ -24,11 +24,18 @@ body {
     font-weight: 500;
 }
 
+@font-face {
+    font-family: 'DSEG7';
+    src: url('fonts/DSEG7Classic-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .control-panel {
     height: min(100dvh, calc(100dvw * 16 / 9));
     aspect-ratio: 9 / 16;
     display: grid;
-    grid-template-rows: 2fr 3fr 2fr 4fr;
+    grid-template-rows: 20fr 30fr 20fr 40fr;
     gap: 2%;
     padding: 2%;
     overflow: hidden;
@@ -38,52 +45,58 @@ body {
 .block {
     display: flex;
     justify-content: space-between;
-    gap: 3%;
+    gap: 2%;
     min-height: 0;
-    padding: 4%;
+    padding: 2%;
     background: var(--card);
-    border: 0.2cqi solid var(--border);
-    border-radius: 3cqi;
+    border: 0.1cqi solid var(--border);
+    border-radius: 1cqi;
     container-type: inline-size;
 }
 
-.force-container {
+.container {
     flex: 1;
     min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    gap: 2%;
-    padding: 3% 1%;
+    padding: 1%;
     background: #101720;
     border-radius: 3cqi;
     text-align: center;
     overflow: hidden;
 }
 
-.force-lab {
+.label {
     margin: 0;
     color: var(--muted);
     font-size: 3cqi;
 }
 
-.force-val {
+.text-value{
     margin: 0;
     color: var(--text);
-    font-size: 6cqi;
+    font-size: 2cqi;
+}
+
+.force-value {
+    margin: 0;
+    color: var(--text);
+    font-size: 7cqi;
+    font-family: 'DSEG7', monospace;
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
 }
 
-#rel-force-val {
+#rel-force-value {
     color: var(--accent);
-    font-size: 8cqi;
+    font-size: 9cqi;
 }
 
 .button {
     width: 90%;
-    padding: 5% 2%;
+    padding: 15% 1%;
     background: #1b2735;
     color: var(--text);
     border: .4cqi solid #344357;

@@ -5,45 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Control Panel</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <div class="control-panel">
-        <div class="block"></div>
         <div class="block">
-                <div class="force-container">
-                    <p id="zero-force-lab" class="force-lab">ZERO</p>
-                    <p id="zero-force-val" class="force-val">18.24</p>
+                <div class="container">
+                        <p class="label">DEVICE</p>
+                        <p id="device-value" class="text-value">No Device Connected</p>
+                        <button class="button">CONNECT</button>
+                </div>
+                <div class="container">
+                    <p class="label">TIME</p>
+                    <p id="time-value" class="text-value">25-10-2026   17:41:33</p>
+                    <button class="button">EDIT</button>
+                </div>
+                
+                <div class="container">
+                    <p class="label">UNIT</p>
+                    <p id="unit-value" class="text-value">kN</p>
+                    <button class="button">CYCLE UNIT</button>
+                </div>
+        </div>
+        <div class="block">
+                <div class="container">
+                    <p id="zero-force-label" class="label">ZERO</p>
+                    <p id="zero-force-value" class="force-value">18.24</p>
                     <button class="button">SET ZERO</button>
                 </div>
-                <div id="rel-force-container" class="force-container">
-                    <p id="rel-force-lab" class="force-lab">RELATIVE</p>
-                    <p id="rel-force-val" class="force-val">02.53</p>
+                <div id="rel-force-container" class="container">
+                    <p id="rel-force-label" class="label">RELATIVE</p>
+                    <p id="rel-force-value" class="force-value">02.53</p>
                     <button class="button">FULL SCREEN</button>
                 </div>
-                <div class="force-container">
-                    <p id="abs-force-lab" class="force-lab">ABSOLUTE</p>
-                    <p id="abs-force-val" class="force-val">20.77</p>
+                <div class="container">
+                    <p class="label">ABSOLUTE</p>
+                    <p id="abs-force-value" class="force-value">20.77</p>
                     <button class="button">REMOVE ZERO</button>
                 </div>
         </div>
         
         <div class="block">
-                <div class="force-container">
+                <div class="container">
                     <div class="force-header">
-                        <p class="force-lab">MIN</p>
+                        <p class="label">MIN</p>
                         <button class="button">RESET</button>
                     </div>
-                    <p class="force-val">01.24</p>
+                    <p class="force-value">01.24</p>
                 </div>
 
-                <div class="force-container">
+                <div class="container">
                     <div class="force-header">
-                        <p class="force-lab">MAX</p>
+                        <p class="label">MAX</p>
                         <button class="button">RESET</button>
                     </div>
-                    <p class="force-val">76.23</p>
+                    <p class="force-value">76.23</p>
                 </div>
         </div>
         <div class="block"></div>
