@@ -5,6 +5,8 @@ body {
     place-items: center;
     background-color: #999;
     overflow: hidden;
+    font-family: "Monaco", monospace;
+    font-weight: bold;
 }
 
 .control-panel {
@@ -19,16 +21,48 @@ body {
 .block {
     width: 80%;
     height: 80%;
-    display: grid;
-    place-items: center;
+
+    display: flex;
+    padding: 5%;
+    justify-content: space-between;
+    box-sizing: border-box;
 
     background-color: #666;
-    border-radius: 5% / calc(5%*1.5);
+    border-radius: 1cqw;
     box-shadow:
         .5vw .5vw 0  #444,
         1vw 1vw 1vw rgba(0, 0, 0, 0.35);
 }
 
-.text {
-  width: 50cwq;
+.force-container {
+    width: 30%;
+    background-color: lightblue;
+    border-radius: 1cqw;
+    container-type: inline-size;
+
+    place-items: center;
+    text-align: center;
+}
+
+.force-lab {
+    font-size: 14cqi;
+}
+
+.force-val {
+    font-size: 20cqi;
+}
+
+#rel-force-val {
+    font-size: 30cqi;
+}
+
+.button {
+    width: 90%;
+    height: 20%;
+    background-color: blue;
+    border: none;
+    border-radius: 8%;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 14cqi;
 }
