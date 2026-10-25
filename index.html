@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Control Panel</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -10,25 +10,37 @@
 <body>
 
     <div class="control-panel">
+        <div class="block"></div>
         <div class="block">
                 <div class="force-container">
-                    <p id="zero-force-lab"class="force-lab">0 Offset</p>
-                    <p id="zero-force-val"class="force-val">18.24</p>
-                    <button class="button">Set 0 Offset</button>
+                    <p id="zero-force-lab" class="force-lab">0-OFFSET</p>
+                    <p id="zero-force-val" class="force-val">18.24</p>
+                    <button class="button">SET 0 OFFSET</button>
                 </div>
-                <div class="force-container">
-                    <p id="rel-force-lab" class="force-lab">Relative</p>
+                <div id="rel-force-container" class="force-container">
+                    <p id="rel-force-lab" class="force-lab">RELATIVE</p>
                     <p id="rel-force-val" class="force-val">02.53</p>
-                    <button class="button">Full Screen</button>
+                    <button class="button">FULL SCREEN</button>
                 </div>
                 <div class="force-container">
-                    <p id="abs-force-lab" class="force-lab">Absolute</p>
+                    <p id="abs-force-lab" class="force-lab">ABSOLUTE</p>
                     <p id="abs-force-val" class="force-val">20.77</p>
-                    <button class="button">Remove 0 Offset</button>
+                    <button class="button">REMOVE 0-OFFSET</button>
                 </div>
         </div>
-        <div class="block"></div>
-        <div class="block"></div>
+        
+        <div class="block">
+                <div class="force-container">
+                    <p id="zero-force-lab" class="force-lab">MIN</p>
+                    <p id="zero-force-val" class="force-val">18.24</p>
+                    <button class="button">RESET</button>
+                </div>
+                <div class="force-container">
+                    <p id="abs-force-lab" class="force-lab">MAX</p>
+                    <p id="abs-force-val" class="force-val">20.77</p>
+                    <button class="button">RESET</button>
+                </div>
+        </div>
         <div class="block"></div>
 
     </div>
