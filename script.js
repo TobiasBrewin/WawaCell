@@ -31,7 +31,7 @@ function drawGraph(){
     let max=Math.max(...absForces);
 
     if(max-min < 11){
-        max=min+11;
+        max=min+1;
     }
 
     let margin=50;
@@ -240,6 +240,7 @@ function setMax(){
 function handleNotification(event){
     const value = event.target.value;
     const absForce = value.getFloat32(0,true);
+    console.log(value)
     const relForce = absForce - zeroForce
 
     if (absForce<minForce){minForce = absForce}
@@ -264,15 +265,11 @@ function handleNotification(event){
 }
 
 function formatForceValue(value) {
-    if (typeof value !== "number" || !Number.isFinite(value)) {
-        return "-";
-    }
+    if (typeof value !== "number" || !Number.isFinite(value)) return "-";
 
-    if (value > 99.99){
-        return "99.99"
-    } else if (value < -9.99){
-        return "-9.99"
-    }
+    if (value > 99.99) return "99.99";
+    if (value < -9.99) return "-9.99";
+    if (value >= -0.5 && value < 0) return "00.00";
 
     return value.toFixed(2).padStart(5, "0");
 }
