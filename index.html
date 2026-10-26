@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Control Panel</title>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,12 +14,12 @@
         <div class="block">
                 <div class="container">
                         <p class="label">DEVICE</p>
-                        <p id="device-value" class="text-value">No Device Connected</p>
-                        <button class="button">CONNECT</button>
+                        <p id="connection-value" class="text-value">No Device Connected</p>
+                        <button id="connect-button"class="button" onclick="toggleConnection()">CONNECT</button>
                 </div>
                 <div class="container">
                     <p class="label">TIME</p>
-                    <p id="time-value" class="text-value">25-10-2026   17:41:33</p>
+                    <p id="time-value" class="text-value">-</p>
                     <button class="button">EDIT</button>
                 </div>
                 
@@ -32,18 +32,18 @@
         <div class="block">
                 <div class="container">
                     <p id="zero-force-label" class="label">ZERO</p>
-                    <p id="zero-force-value" class="force-value">18.24</p>
-                    <button class="button">SET ZERO</button>
+                    <p id="zero-force-value" class="force-value">-</p>
+                    <button class="button" onclick="setZero()">SET ZERO</button>
                 </div>
                 <div id="rel-force-container" class="container">
                     <p id="rel-force-label" class="label">RELATIVE</p>
-                    <p id="rel-force-value" class="force-value">02.53</p>
+                    <p id="rel-force-value" class="force-value">-</p>
                     <button class="button">FULL SCREEN</button>
                 </div>
                 <div class="container">
                     <p class="label">ABSOLUTE</p>
-                    <p id="abs-force-value" class="force-value">20.77</p>
-                    <button class="button">REMOVE ZERO</button>
+                    <p id="abs-force-value" class="force-value">-</p>
+                    <button class="button" onclick="removeZero()">REMOVE ZERO</button>
                 </div>
         </div>
         
@@ -51,20 +51,22 @@
                 <div class="container">
                     <div class="force-header">
                         <p class="label">MIN</p>
-                        <button class="button">RESET</button>
+                        <button class="button" onclick="setMin()">RESET</button>
                     </div>
-                    <p class="force-value">01.24</p>
+                    <p id="min-force-value" class="force-value">-</p>
                 </div>
 
                 <div class="container">
                     <div class="force-header">
                         <p class="label">MAX</p>
-                        <button class="button">RESET</button>
+                        <button class="button" onclick="setMax()">RESET</button>
                     </div>
-                    <p class="force-value">76.23</p>
+                    <p id="max-force-value" class="force-value">-</p>
                 </div>
         </div>
-        <div class="block"></div>
+        <div class="block">
+            <canvas id="chart" width="900" height="400"></canvas>
+        </div>
 
     </div>
 
